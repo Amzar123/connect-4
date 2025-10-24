@@ -1,0 +1,2 @@
+class GenerativeAlgorithm:
+    pass
