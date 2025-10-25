@@ -8,7 +8,7 @@ class SimulatedAnnealing(Evaluation):
         super().__init__(piece)
         self.bot_piece = piece
         self.depth = 5
-        self.initial_temp = 100.0
+        self.initial_temp = 1000
         self.cooling_rate = 0.99
         self.n_iterations = 1000
 
