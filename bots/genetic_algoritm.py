@@ -1,5 +1,4 @@
 import random
-
 from bots.evaluation import Evaluation
 
 class GeneticAlgorithm(Evaluation):
