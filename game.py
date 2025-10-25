@@ -18,7 +18,7 @@ bot_map = {
     'expectimax': ExpectiMaxBot,
     'montecarlo': MonteCarloBot,
     'simulated_annealing': SimulatedAnnealing,
-    'generative_algorithm': GenerativeAlgorithm
+    'genetic_algorithm': GeneticAlgorithm
 }
 
 name_map = {
@@ -29,7 +29,7 @@ name_map = {
     'expectimax': 'ExpectiMax Bot',
     'montecarlo': 'Monte Carlo Tree Search Bot',
     'simulated_annealing': 'Simulated Annealing Algorithm Bot',
-    'generative_algorithm': 'Generative Algorithm Bot'
+    'genetic_algorithm': 'Genetic Algorithm Bot'
 }
 
 board = Board(1)
@@ -64,7 +64,7 @@ def main(first_player = None, second_player = None):
         print('ExpectiMax Bot (expectimax)')
         print('Monte Carlo Tree Search Bot (montecarlo)')
         print('Simulated Annealing Bot')
-        print('Generative Algorithm Bot')
+        print('Genetic Algorithm Bot')
         print()
         print('Use the string in the brackets to pass as argument to p1 and p2')
         exit(1)
@@ -170,19 +170,19 @@ def bot_vs_human_screen():
     def human_vs_simulated_annealing():
         main("human", "simulated_annealing")
 
-    def human_vs_generative_algorithm():
-        main("human", "generative_algorithm")
+    def human_vs_genetic_algorithm():
+        main("human", "genetic_algorithm")
 
     minimax_button = graphics_board.create_button(60, 220, 400, 40, '1. MINIMAX BOT', human_vs_minimax)
     expectimax_button = graphics_board.create_button(60, 280, 400, 40, '2. EXPECTIMAX BOT', human_vs_expectimax)
     montecarlo_button = graphics_board.create_button(60, 340, 400, 40, '3. MONTECARLO SEARCH BOT', human_vs_montecarlo)
     simulated_annealing_button = graphics_board.create_button(60, 400, 400, 40, '4. SIMULATED ANNEALING BOT', human_vs_simulated_annealing)
-    generative_algorithm_button = graphics_board.create_button(60, 460, 400, 40, '5. GENERATIVE ALGORITHM BOT', human_vs_generative_algorithm)
+    genetic_algorithm_button = graphics_board.create_button(60, 460, 400, 40, '5. GENETIC ALGORITHM BOT', human_vs_genetic_algorithm)
     
     back_button = graphics_board.create_button(60, 600, 100, 40, 'BACK', main_screen)
     quit_button = graphics_board.create_button(180, 600, 100, 40, 'QUIT', sys.exit)
 
-    button_list = [minimax_button, expectimax_button, montecarlo_button, simulated_annealing_button, generative_algorithm_button, back_button, quit_button]
+    button_list = [minimax_button, expectimax_button, montecarlo_button, simulated_annealing_button, genetic_algorithm_button, back_button, quit_button]
 
     while True:
         graphics_board.write_on_board("CONNECT 4 GAME", graphics_board.RED , 350 , 100, 60, True)
@@ -232,12 +232,12 @@ def bot_vs_bot_screen():
     expectimax_button = graphics_board.create_button(60, 280, 400, 40, '2. EXPECTIMAX BOT', bots_to_play_against, ("expectimax"))
     montecarlo_button = graphics_board.create_button(60, 340, 400, 40, '3. MONTECARLO SEARCH BOT', bots_to_play_against, ("montecarlo"))
     simulated_annealing_button = graphics_board.create_button(60, 400, 400, 40, '4. SIMULATED ANNEALING BOT', bots_to_play_against, ("simulated_annealing"))
-    generative_algorithm_button = graphics_board.create_button(60, 460, 400, 40, '5. GENERATIVE ALGORITHM BOT', bots_to_play_against, ("generative_algorithm"))
+    genetic_algorithm_button = graphics_board.create_button(60, 460, 400, 40, '5. GENETIC ALGORITHM BOT', bots_to_play_against, ("genetic_algorithm"))
     
     back_button = graphics_board.create_button(60, 600, 100, 40, 'BACK', main_screen)
     quit_button = graphics_board.create_button(180, 600, 100, 40, 'QUIT', sys.exit)
 
-    button_list = [minimax_button, expectimax_button, montecarlo_button, simulated_annealing_button, generative_algorithm_button, back_button, quit_button]
+    button_list = [minimax_button, expectimax_button, montecarlo_button, simulated_annealing_button, genetic_algorithm_button, back_button, quit_button]
 
     while True:
         graphics_board.write_on_board("CONNECT 4 GAME", graphics_board.RED , 350 , 100, 60, True)
